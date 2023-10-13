@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import config from '../../config.json';
+import { Analytics } from '@vercel/analytics/react';
 import { Input } from '../components/input';
 import { useHistory } from '../components/history/hook';
 import { History } from '../components/history/History';
@@ -56,6 +57,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
             setLastCommandIndex={setLastCommandIndex}
             clearHistory={clearHistory}
           />
+          <Analytics />
         </div>
       </div>
     </>
