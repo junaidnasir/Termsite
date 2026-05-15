@@ -19,6 +19,7 @@ div#__next,
 div#__next > div {
   height: 100%;
   overflow: auto;
+  max-width: 100vw;
 }
 
 ::-webkit-scrollbar {

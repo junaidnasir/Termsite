@@ -174,7 +174,23 @@ export const sudo = async (args?: string[]): Promise<string> => {
 
 // Banner
 export const banner = (args?: string[]): string => {
-  return `
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+
+  if (isMobile) {
+    return `
+ ╦╦ ╦╔╗╔╔═╗╦╔╦╗
+ ║║ ║║║║╠═╣║ ║║
+╚╝╚═╝╝╚╝╩ ╩╩═╩╝
+ ╔╗╔╔═╗╔═╗╦╦═╗
+ ║║║╠═╣╚═╗║╠╦╝
+ ╝╚╝╩ ╩╚═╝╩╩╚═
+
+Type 'help' to see the list of available commands.
+Type 'summary' to display summary.
+`;
+  }
+
+  return `<div style="overflow-x:auto">
       █████                                  ███      █████    ██████   █████                    ███           
      ░░███                                  ░░░      ░░███    ░░██████ ░░███                    ░░░            
       ░███  █████ ████ ████████    ██████   ████   ███████     ░███░███ ░███   ██████    █████  ████  ████████ 
@@ -183,7 +199,7 @@ export const banner = (args?: string[]): string => {
 ███   ░███  ░███ ░███  ░███ ░███  ███░░███  ░███ ░███ ░███     ░███  ░░█████  ███░░███  ░░░░███ ░███  ░███     
 ░░████████   ░░████████ ████ █████░░████████ █████░░████████    █████  ░░█████░░████████ ██████  █████ █████    
 ░░░░░░░░     ░░░░░░░░ ░░░░ ░░░░░  ░░░░░░░░ ░░░░░  ░░░░░░░░    ░░░░░    ░░░░░  ░░░░░░░░ ░░░░░░  ░░░░░ ░░░░░     
-
+</div>
 Type 'help' to see the list of available commands.
 Type 'summary' to display summary.
 `;
