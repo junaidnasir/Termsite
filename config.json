@@ -4,18 +4,11 @@
   "name": "Junaid Nasir",
   "ascii": "Junaid",
   "social": {
-    "github": "junaidnasir",
     "linkedin": "junaidnasir"
   },
-  "email": "spamenot@sharklasers.com",
   "ps1_hostname": "junaid",
   "ps1_username": "visitor",
-  "repo": "https://github.com/junaidnasir/Termsite",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
-  "donate_urls": {
-    "paypal": "https://paypal.me/",
-    "patreon": "https://patreon.com/"
-  },
+  "repo": "",
   "colors": {
     "light": {
       "background": "#FBF1C9",

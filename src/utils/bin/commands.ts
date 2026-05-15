@@ -22,12 +22,6 @@ Type 'summary' to display summary.
 `;
 };
 
-// Redirection
-export const repo = async (args: string[]): Promise<string> => {
-  window.open(`${config.repo}`);
-  return 'Opening Github repository...';
-};
-
 // About
 export const about = async (args: string[]): Promise<string> => {
   return `Hi, I am ${config.name}. 
@@ -57,10 +51,23 @@ export const email = async (args: string[]): Promise<string> => {
   return `Hey I just met you, and this is crazy, so how about NO?`;
 };
 
-export const github = async (args: string[]): Promise<string> => {
-  window.open(`https://github.com/${config.social.github}/`);
-
-  return 'Opening github...';
+export const theme = async (args: string[]): Promise<string> => {
+  const root = document.documentElement;
+  if (args[0] === 'dark') {
+    root.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+    return 'Switched to dark mode.';
+  } else if (args[0] === 'light') {
+    root.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+    return 'Switched to light mode.';
+  } else {
+    // Toggle
+    root.classList.toggle('dark');
+    const current = root.classList.contains('dark') ? 'dark' : 'light';
+    localStorage.setItem('theme', current);
+    return `Switched to ${current} mode. Usage: theme [dark|light]`;
+  }
 };
 
 export const linkedin = async (args: string[]): Promise<string> => {

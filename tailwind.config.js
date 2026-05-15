@@ -5,7 +5,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'class', // 'class' for manual toggle via theme command
   theme: {
     colors: {
       transparent: 'transparent',
