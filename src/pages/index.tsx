@@ -40,6 +40,16 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     <>
       <Head>
         <title>{config.title}</title>
+        <meta name="description" content="Junaid Nasir — software engineer building small, focused tools. Explore projects, preferences, and more via this interactive terminal." />
+        <meta name="author" content="Junaid Nasir" />
+        <meta property="og:title" content="Junaid Nasir" />
+        <meta property="og:description" content="Interactive terminal portfolio — type commands to explore projects and more." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://junaidnasir.com" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Junaid Nasir" />
+        <meta name="twitter:description" content="Interactive terminal portfolio — type commands to explore projects and more." />
+        <link rel="canonical" href="https://junaidnasir.com" />
       </Head>
 
       <div className="p-2 sm:p-8 overflow-hidden h-full border-2 rounded border-light-yellow dark:border-dark-yellow">
